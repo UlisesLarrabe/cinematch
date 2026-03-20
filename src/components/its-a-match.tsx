@@ -9,7 +9,7 @@ export default function ItsAMatch({
   setMatch: React.Dispatch<React.SetStateAction<Movie | null>>;
 }) {
   return (
-    <div className="absolute inset-0 z-50 bg-dark/95 flex flex-col items-center justify-center p-6 text-center backdrop-blur-md">
+    <div className="absolute inset-0 z-50 bg-dark/95 flex flex-col items-center min-h-dvh justify-center p-6 text-center backdrop-blur-md">
       <motion.div
         initial={{ scale: 0.5, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}

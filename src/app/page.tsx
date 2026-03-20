@@ -1,31 +1,12 @@
+import Hero from "@/components/hero";
 import CirclePlus from "@/svgs/circle-plus";
 import { HandFinger } from "@/svgs/hand-finger";
 import Movie from "@/svgs/movie";
-import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="flex flex-col min-h-screen bg-neutral justify-center items-center w-full">
-      <section className="flex flex-col min-h-screen bg-neutral justify-center items-center lg:w-5xl">
-        <p className="text-white font-semibold text-center text-8xl">
-          Elige una película
-        </p>
-        <p className="text-red-neutral font-semibold text-center text-8xl">
-          sin dar vueltas
-        </p>
-        <p className="text-gray-100 font-light text-center text-lg pt-9">
-          Una sala compartida y un solo match.
-        </p>
-        <p className="text-gray-100 font-light text-center text-lg pb-9">
-          Sin iniciar sesión.
-        </p>
-        <Link
-          className="bg-red-neutral text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-600 hover:cursor-pointer"
-          href={"/room/create"}
-        >
-          Empezar una sala
-        </Link>
-      </section>
+      <Hero />
       <section className="w-full lg:w-5xl pt-4 flex flex-col gap-10 p-2">
         <h2 className="text-3xl font-bold text-white">Elige tu película</h2>
         <div className="grid md:grid-cols-3 gap-4">

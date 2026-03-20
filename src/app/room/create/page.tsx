@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export default function CreateRoomPage() {
   const [providersSelected, setProvidersSelected] = useState<number[]>([]);
-  const [regionSelected, setRegionSelected] = useState<string>("AR");
+  const [regionSelected, setRegionSelected] = useState<string>("ES");
   const [genresSelected, setGenresSelected] = useState<number[]>([]);
 
   return (

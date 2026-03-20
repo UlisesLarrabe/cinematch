@@ -8,7 +8,7 @@ const Page = () => {
 
   return (
     <div className="bg-neutral min-h-dvh w-full flex flex-col text-white items-center">
-      <section className="w-5xl pt-4 flex flex-col gap-10">
+      <section className="lg:w-5xl pt-4 flex flex-col gap-10 p-4">
         <SwipeMovies roomId={roomId} />
       </section>
     </div>

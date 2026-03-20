@@ -117,7 +117,7 @@ const SwipeMovies = ({ roomId }: { roomId: ParamValue | undefined }) => {
   };
 
   return (
-    <div className="min-h-dvh flex flex-col justify-center items-center pt-8">
+    <div className="min-h-dvh flex flex-col justify-center items-center pt-20">
       <div className=" text-gray-300 pb-2.5">
         <p>¡Encuentra películas que ambos amen!</p>
       </div>
@@ -148,7 +148,7 @@ const SwipeMovies = ({ roomId }: { roomId: ParamValue | undefined }) => {
         ))}
       </section>
       {movies.length > 0 && (
-        <div className="lg:w-5xl flex gap-10 items-center mt-10 justify-center">
+        <div className="lg:w-5xl flex gap-10 items-center mt-5 justify-center">
           <button
             className="bg-gray-500 rounded-full p-4 text-center hover:cursor-pointer hover:bg-gray-800"
             onClick={() => {
@@ -171,7 +171,7 @@ const SwipeMovies = ({ roomId }: { roomId: ParamValue | undefined }) => {
         </div>
       )}
 
-      <div className=" text-gray-300 pt-2.5">
+      <div className=" text-gray-300 pt-2.5 w-full text-center">
         <p>Desliza hacia la derecha si te gusta, hacia la izquierda si no.</p>
       </div>
     </div>

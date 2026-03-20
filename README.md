@@ -74,7 +74,7 @@ El proyecto está construido priorizando la velocidad, el tiempo real y el dise�
 - **Frontend:** Next.js (App Router), React, Tailwind CSS.
 - **Base de Datos & Realtime:** Supabase (PostgreSQL, Realtime WebSockets para la sincronización de los Matches).
 - **Consumo de Datos:** The Movie Database (TMDB) API.
-- **Despliegue (DevOps):** VPS de **CubePath** gestionado mediante contenedores con **Dockploy**.
+- **Despliegue (DevOps):** VPS de **CubePath** aprovechando su integración nativa con **Dockploy** para la gestión de contenedores.
 - **Optimización:** Uso estratégico de caché (`sessionStorage`) para minimizar peticiones a la API y acelerar la carga de la interfaz.
 
 ---

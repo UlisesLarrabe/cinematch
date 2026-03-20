@@ -7,7 +7,7 @@ import { useState } from "react";
 const ShareButton = ({ roomId }: { roomId: ParamValue }) => {
   const [copied, setCopied] = useState(false);
 
-  const roomUrl = `${typeof window !== "undefined" ? window.location.origin : ""}/sala/${roomId}`;
+  const roomUrl = `${typeof window !== "undefined" ? window.location.origin : ""}/room/${roomId}`;
 
   const shareText = `¡Únete a mi sala para elegir qué película vemos hoy! 🍿👇\n\n`;
 

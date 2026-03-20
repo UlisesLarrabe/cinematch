@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     "amigos",
     "netflix",
   ],
+  icons: {
+    icon: "/favicon.ico",
+  },
 
   openGraph: {
     title: "CineMatch | Haz match y decide qué ver 🍿",

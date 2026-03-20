@@ -23,9 +23,9 @@ const ProviderCard = ({
     <button
       className={`flex flex-col items-center gap-2 p-2 rounded-lg hover:cursor-pointer ${
         providersSelected.includes(provider.provider_id)
-          ? "bg-red-neutral"
-          : "bg-gray-400"
-      } transition-colors`}
+          ? "border-2 border-red-neutral"
+          : "border-2 border-transparent hover:border-white/20"
+      } transition-colors `}
       onClick={handleSelectProvider}
     >
       <img

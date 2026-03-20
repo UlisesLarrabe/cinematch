@@ -5,8 +5,12 @@ import { useState } from "react";
 
 const GenerateRoom = ({
   providersSelected,
+  genresSelected,
+  regionSelected,
 }: {
   providersSelected: number[];
+  genresSelected: number[];
+  regionSelected: string;
 }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [showError, setShowError] = useState(false);
@@ -16,7 +20,11 @@ const GenerateRoom = ({
     try {
       const { data, error } = await supabase
         .from("rooms")
-        .insert({ providers: providersSelected })
+        .insert({
+          providers: providersSelected,
+          genres: genresSelected,
+          region: regionSelected,
+        })
         .select()
         .single();
       if (data) {

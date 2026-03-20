@@ -4,7 +4,7 @@ import Movie from "@/svgs/movie";
 
 const MoreInfoSection = () => {
   return (
-    <section className="w-full lg:w-5xl pt-4 flex flex-col gap-10 p-2">
+    <section className="w-full lg:w-5xl pt-4 flex flex-col gap-4 p-2">
       <h2 className="text-3xl font-bold text-white">Elige tu película</h2>
       <div className="grid md:grid-cols-3 gap-4">
         <article className="flex flex-col gap-4 border-2 bg-[#131313] rounded-lg p-10">

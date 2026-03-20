@@ -53,8 +53,6 @@ export const metadata: Metadata = {
       "Desliza, haz match y decidan qué ver esta noche sin pelear. Filtra por tus plataformas de streaming favoritas.",
     images: ["/og-image.jpg"],
   },
-
-  themeColor: "#171717",
 };
 
 export default function RootLayout({

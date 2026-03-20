@@ -35,11 +35,11 @@ export const metadata: Metadata = {
     title: "CineMatch | Haz match y decide qué ver 🍿",
     description:
       "Crea una sala compartida, desliza hacia la derecha y descubre en qué película coinciden todos. ¡Preparen las palomitas!",
-    url: "http://localhost:3000",
+    url: "https://cinematch.fun",
     siteName: "CineMatch",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/cinematch-logo.webp",
         width: 1200,
         height: 630,
         alt: "Vista previa de CineMatch",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: "CineMatch | El Tinder para elegir qué película ver 🍿",
     description:
       "Desliza, haz match y decidan qué ver esta noche sin pelear. Filtra por tus plataformas de streaming favoritas.",
-    images: ["/og-image.jpg"],
+    images: ["/cinematch-logo.webp"],
   },
 };
 

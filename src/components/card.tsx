@@ -31,7 +31,6 @@ const Card = ({
   const handleDragEnd = async () => {
     if (Math.abs(x.get()) > 50) {
       setMovies((prev) => prev.filter((m) => m.id !== movie.id));
-      console.log(roomId, userId);
       if (roomId && userId) {
         await supabase.from("votes").insert({
           movie_id: movie.id,

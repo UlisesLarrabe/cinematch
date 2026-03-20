@@ -90,7 +90,6 @@ const SwipeMovies = ({ roomId }: { roomId: ParamValue | undefined }) => {
               .limit(1);
 
             if (otherVotes && otherVotes.length > 0) {
-              console.log("🎉 MATCH EN TIEMPO REAL!");
               setMatch(newVote.movie_data);
             }
           }

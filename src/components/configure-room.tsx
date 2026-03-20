@@ -29,9 +29,15 @@ export default function ConfigureRoom({
   const [regions, setRegions] = useState<Region[]>([]);
   const handleGetProviders = async () => {
     try {
+      const cached = sessionStorage.getItem("tmdb_providers");
+      if (cached) {
+        setProviders(JSON.parse(cached));
+        return;
+      }
       const res = await fetch("/api/providers");
       if (!res.ok) throw new Error("Error al obtener proveedores");
       const data = await res.json();
+      sessionStorage.setItem("tmdb_providers", JSON.stringify(data.results));
       setProviders(data.results);
     } catch (error) {
       console.error(error);
@@ -39,12 +45,18 @@ export default function ConfigureRoom({
   };
   const handleGetRegions = async () => {
     try {
+      const cached = sessionStorage.getItem("tmdb_regions");
+      if (cached) {
+        setRegions(JSON.parse(cached));
+        return;
+      }
       const res = await fetch("/api/regions");
       if (!res.ok) throw new Error("Error al obtener regiones");
       const data = await res.json();
       const sortedRegions = data.results.sort((a: Region, b: Region) =>
         a.native_name.localeCompare(b.native_name),
       );
+      sessionStorage.setItem("tmdb_regions", JSON.stringify(sortedRegions));
       setRegions(sortedRegions);
     } catch (error) {
       console.error(error);
@@ -53,9 +65,15 @@ export default function ConfigureRoom({
 
   const handleGetGenres = async () => {
     try {
+      const cached = sessionStorage.getItem("tmdb_genres");
+      if (cached) {
+        setGenres(JSON.parse(cached));
+        return;
+      }
       const res = await fetch("/api/genres");
       if (!res.ok) throw new Error("Error al obtener géneros");
       const data = await res.json();
+      sessionStorage.setItem("tmdb_genres", JSON.stringify(data.genres));
       setGenres(data.genres);
     } catch (error) {
       console.error(error);

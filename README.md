@@ -15,6 +15,7 @@
     <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" /></a>
     <a href="https://supabase.com/"><img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" /></a>
     <a href="https://www.themoviedb.org/"><img src="https://img.shields.io/badge/TMDB_API-01B4E4?style=for-the-badge&logo=themoviedatabase&logoColor=white" alt="TMDB" /></a>
+    <img src="https://img.shields.io/badge/CubePath-0052FF?style=for-the-badge&logo=icloud&logoColor=white" alt="CubePath" />
   </p>
   
   <p>
@@ -46,12 +47,23 @@ Elegir una película con tu pareja o amigos suele terminar en un scroll infinito
 
 ---
 
+## ☁️ Infraestructura: Despliegue en CubePath
+
+Para cumplir con los estándares de producción de la hackathon, **CineMatch está alojado íntegramente en un VPS de CubePath**.
+
+Aprovechando las herramientas integradas de la plataforma, utilicé la opción nativa de CubePath para inicializar **Dockploy** con un solo clic. Esta combinación perfecta me permitió:
+
+- Automatizar el despliegue continuo de la aplicación (Next.js) en contenedores sin configuraciones complejas.
+- Mantener la app rápida, estable y completamente aislada.
+- Aprovechar la potencia del servidor en la nube para manejar las conexiones de WebSockets en tiempo real sin latencia.
+
+---
+
 ## ✨ Experiencia de Usuario (UX/UI)
 
 - **⚡ Cero Fricción:** No hay formularios de registro, ni logins pesados. Entras, creas y compartes.
 - **📱 Mobile First:** Diseñado para sentirse como una app nativa en tu celular, con animaciones fluidas y gestos de _swipe_ intuitivos.
 - **🌍 Catálogo Real:** Alimentado por **TMDB**, muestra exactamente lo que está disponible en tu región hoy mismo.
-- **🔗 Compartir Nativo:** Integración con la _Web Share API_ para invitar por WhatsApp con un solo toque.
 
 ---
 
@@ -62,6 +74,7 @@ El proyecto está construido priorizando la velocidad, el tiempo real y el dise�
 - **Frontend:** Next.js (App Router), React, Tailwind CSS.
 - **Base de Datos & Realtime:** Supabase (PostgreSQL, Realtime WebSockets para la sincronización de los Matches).
 - **Consumo de Datos:** The Movie Database (TMDB) API.
+- **Despliegue (DevOps):** VPS de **CubePath** gestionado mediante contenedores con **Dockploy**.
 - **Optimización:** Uso estratégico de caché (`sessionStorage`) para minimizar peticiones a la API y acelerar la carga de la interfaz.
 
 ---

@@ -11,7 +11,7 @@ const Footer = () => {
           >
             <img src="/themoviedb-logo.svg" alt="TMDB Logo" className="h-6" />
           </a>
-          <p className="text-[10px] uppercase tracking-widest text-gray-500 max-w-[300px] text-center md:text-left leading-relaxed">
+          <p className="text-[10px] uppercase tracking-widest text-gray-500 max-w-75 text-center md:text-left leading-relaxed">
             Este producto utiliza la API de{" "}
             <span className="text-gray-400">TMDb</span> pero no está avalado ni
             certificado por ellos.

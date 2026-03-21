@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="flex flex-col text-center lg:text-left items-center lg:items-start">
           <h1 className="text-white font-bold text-3xl md:text-7xl lg:text-8xl leading-tight">
             Elige una película <br />
-            <span className="text-red-600">sin dar vueltas</span>
+            <span className="text-red-neutral">sin dar vueltas</span>
           </h1>
           <p className="text-gray-300 font-light text-xl mt-8 max-w-lg">
             Una sala compartida, dos personas y un solo match.
@@ -31,7 +31,7 @@ const Hero = () => {
 
           <div className="mt-10">
             <Link
-              className="inline-block bg-red-600 text-white font-bold py-4 px-8 rounded-xl hover:bg-red-700 transition-all hover:scale-105 shadow-lg shadow-red-900/20"
+              className="inline-block bg-red-neutral text-white font-bold py-4 px-8 rounded-xl hover:bg-red-700 transition-all hover:scale-105 shadow-lg shadow-red-900/20"
               href={"/room/create"}
             >
               Empezar una sala ahora

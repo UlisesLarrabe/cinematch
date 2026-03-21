@@ -44,7 +44,7 @@ const Hero = () => {
 
           <div className="relative w-full max-w-[300px] md:max-w-[350px] drop-shadow-2xl">
             <video
-              src="/hero-demo.mov"
+              src="/hero-video.mov"
               autoPlay
               muted
               loop

@@ -42,14 +42,14 @@ const Hero = () => {
         <div className="relative flex justify-center items-center">
           <div className="absolute w-64 h-64 bg-red-600/20 blur-[100px] rounded-full" />
 
-          <div className="relative w-full max-w-75 md:max-w-87.5 drop-shadow-2xl">
+          <div className="relative w-full max-w-75 md:max-w-87.5 drop-shadow-2xl ">
             <video
               src="/hero-video.mov"
               autoPlay
               muted
               loop
               playsInline
-              className="w-full h-auto rounded-[2.5rem] border-4 border-neutral-800 shadow-2xl"
+              className="w-full rounded-[2.5rem] border-4 border-neutral-800 shadow-2xl h-160.25"
             />
           </div>
         </div>

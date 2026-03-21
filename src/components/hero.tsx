@@ -42,7 +42,7 @@ const Hero = () => {
         <div className="relative flex justify-center items-center">
           <div className="absolute w-64 h-64 bg-red-600/20 blur-[100px] rounded-full" />
 
-          <div className="relative w-full max-w-[300px] md:max-w-[350px] drop-shadow-2xl">
+          <div className="relative w-full max-w-75 md:max-w-87.5 drop-shadow-2xl">
             <video
               src="/hero-video.mov"
               autoPlay

@@ -8,6 +8,9 @@ import Card from "./card";
 import ItsAMatch from "./its-a-match";
 import { useAnonUser } from "@/utils/user/user";
 import ShareButton from "./share-button";
+import NoMoreFilms from "./no-more-films";
+import Heart from "@/svgs/heart";
+import { LetterX } from "@/svgs/letter-x";
 
 const SwipeMovies = ({ roomId }: { roomId: ParamValue | undefined }) => {
   const supabase = createClient();
@@ -116,18 +119,19 @@ const SwipeMovies = ({ roomId }: { roomId: ParamValue | undefined }) => {
   };
 
   return (
-    <div className="min-h-dvh flex flex-col justify-center items-center pt-20">
-      <div className=" text-gray-300 pb-2.5">
-        <p>¡Encuentra películas que ambos amen!</p>
+    <div className="min-h-dvh h-full flex flex-col justify-center items-center pt-20">
+      <div className=" pb-4">
+        <p className="text-3xl font-bold text-center">
+          ¡Encuentra la película que ambos amen!
+        </p>
+        <div className=" text-gray-300 pt-2.5 w-full text-center">
+          {`Desliza a la derecha para 'Si' y a la izquierda para 'Quizás la
+          próxima'.`}
+        </div>
       </div>
-      <ShareButton roomId={roomId || ""} />
-      <section className="grid place-items-center w-full max-w-5xl mx-auto h-[60dvh]">
+      <section className="grid place-items-center w-full max-w-5xl mx-auto min-h-[60dvh]">
         {match && <ItsAMatch match={match} setMatch={setMatch} />}
-        {movies.length === 0 && !match && !isLoading && (
-          <p className="text-gray-300 text-lg">
-            🎥 No hay más películas para mostrar. 🎥
-          </p>
-        )}
+        {movies.length === 0 && !match && !isLoading && <NoMoreFilms />}
         {isLoading &&
           Array.from({ length: 5 }).map((_, index) => (
             <div
@@ -147,31 +151,32 @@ const SwipeMovies = ({ roomId }: { roomId: ParamValue | undefined }) => {
         ))}
       </section>
       {movies.length > 0 && (
-        <div className="lg:w-5xl flex gap-10 items-center mt-5 justify-center">
-          <button
-            className="bg-gray-500 rounded-full p-4 text-center hover:cursor-pointer hover:bg-gray-800"
-            onClick={() => {
-              const movieAlFrente = movies[0];
-              if (movieAlFrente) handleDiscardMovie(movieAlFrente, false);
-            }}
-          >
-            ❌
-          </button>
+        <>
+          <div className="lg:w-5xl flex gap-10 items-center  justify-center">
+            <button
+              className="bg-gray-500 rounded-full p-4 text-center hover:cursor-pointer hover:bg-gray-800"
+              onClick={() => {
+                const movieAlFrente = movies[0];
+                if (movieAlFrente) handleDiscardMovie(movieAlFrente, false);
+              }}
+            >
+              <LetterX className="text-red-800 h-10 w-10" />
+            </button>
 
-          <button
-            className="bg-red-neutral rounded-full p-4 text-center hover:cursor-pointer hover:bg-red-500"
-            onClick={() => {
-              const movieAlFrente = movies[0];
-              if (movieAlFrente) handleDiscardMovie(movieAlFrente, true);
-            }}
-          >
-            ♥️
-          </button>
-        </div>
+            <button
+              className="bg-red-neutral rounded-full p-4 text-center hover:cursor-pointer hover:bg-red-500 text-red-800"
+              onClick={() => {
+                const movieAlFrente = movies[0];
+                if (movieAlFrente) handleDiscardMovie(movieAlFrente, true);
+              }}
+            >
+              <Heart className="text-red-800 h-10 w-10" />
+            </button>
+          </div>
+        </>
       )}
-
-      <div className=" text-gray-300 pt-2.5 w-full text-center">
-        <p>Desliza hacia la derecha si te gusta, hacia la izquierda si no.</p>
+      <div className="mt-10 ">
+        <ShareButton roomId={roomId || ""} />
       </div>
     </div>
   );

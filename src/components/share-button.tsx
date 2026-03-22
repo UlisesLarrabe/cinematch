@@ -38,12 +38,10 @@ const ShareButton = ({ roomId }: { roomId: ParamValue }) => {
     <div className="flex flex-col gap-3 items-center w-full max-w-sm mx-auto ">
       <button
         onClick={handleShare}
-        className="w-full bg-[#151111] text-white font-bold py-3 px-6 rounded-xl hover:cursor-pointer hover:bg-red-400/10 transition-colors shadow-lg active:scale-95 flex justify-center items-center gap-2"
+        className="w-full bg-[#1A1818] text-white font-bold py-3 px-6 rounded-xl hover:cursor-pointer hover:bg-[#1A1818]/40 transition-colors shadow-lg active:scale-95 flex justify-center items-center gap-2"
       >
-        <div className="bg-[#2A1314] rounded-full p-4 text-red-neutral">
-          <Share />
-        </div>
-        {copied ? "¡Link Copiado! ✅" : "COMPARTE ESTA SALA"}
+        <Share height="24" width="24" />
+        {copied ? "¡Link Copiado! ✅" : "Comparte esta sala"}
       </button>
     </div>
   );

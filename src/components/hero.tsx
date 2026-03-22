@@ -49,7 +49,7 @@ const Hero = () => {
               muted
               loop
               playsInline
-              className="w-full rounded-[2.5rem] border-4 border-neutral-800 shadow-2xl h-160.25"
+              className="w-full rounded-[2.5rem] border-4 border-neutral-800 shadow-2xl h-160.25  object-cover"
             />
           </div>
         </div>

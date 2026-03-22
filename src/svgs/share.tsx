@@ -1,10 +1,10 @@
-const Share = () => {
+const Share = ({ height, width }: { height?: string; width?: string }) => {
   return (
     <svg
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
+      width={width || "32"}
+      height={height || "32"}
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"

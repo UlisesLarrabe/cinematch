@@ -35,7 +35,7 @@ const NoMoreFilms = () => {
           <div>
             <h3 className="text-white text-xl font-bold">Ajustar filtros</h3>
             <p className="text-sm text-[#8E8C8C]">
-              Añade más géneros o invluye nuevas plataformas de streaming.
+              Añade más géneros o incluye nuevas plataformas de streaming.
             </p>
           </div>
         </article>

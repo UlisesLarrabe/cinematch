@@ -1,5 +1,6 @@
 import Copy from "@/svgs/copy";
 import Heart from "@/svgs/heart";
+import { LetterX } from "@/svgs/letter-x";
 import PlayTv from "@/svgs/play-tv";
 import Share from "@/svgs/share";
 import Link from "next/link";
@@ -9,12 +10,13 @@ const HowItWorks = () => {
     <section className="bg-neutral text-white py-24 px-6 overflow-hidden">
       <div className="max-w-3xl mx-auto text-center mb-24">
         <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
-          Encuentra tu próxima <br />
-          <span className="text-[#FF6B6B]">película favorita.</span>
+          Hagan match. <br />
+          <span className="text-[#FF6B6B]">Denle play.</span>
         </h2>
         <p className="text-neutral-400 text-lg md:text-xl font-light">
-          Adiós a las horas perdidas navegando por catálogos interminables. Con
-          CineMatch, elegir qué ver es tan emocionante como la película misma.
+          Decidir qué película ver ahora es un juego cooperativo. Compartí el
+          link, deslicen a la derecha las que les gustan y dejen que CineMatch
+          encuentre la coincidencia perfecta. Cero vueltas, 100% cine.
         </p>
       </div>
 
@@ -96,14 +98,47 @@ const HowItWorks = () => {
           <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-[#111] border border-neutral-700 z-10 shadow-[0_0_15px_rgba(255,107,107,0.2)] text-[#FF6B6B]">
             <Heart />
           </div>
-          <div className="md:w-5/12  md:justify-start w-full grid place-items-center">
-            {Array.from({ length: 2 }).map((_, index) => (
+          <div className="md:w-5/12 md:justify-start w-full flex flex-col items-center">
+            <div className="relative h-96 w-72 mb-10 drop-shadow-2xl">
               <div
-                key={index}
-                className={`h-96 w-72 rounded-lg p-4 bg-[#222222] ${index % 2 === 0 ? "rotate-6" : "-rotate-6"}`}
+                className="absolute inset-0 rounded-2xl p-6 flex flex-col justify-end overflow-hidden rotate-12 bg-[#333333] border border-neutral-700/50"
                 style={{ gridRow: 1, gridColumn: 1 }}
               ></div>
-            ))}
+
+              <div
+                className="absolute inset-0 rounded-2xl p-6 flex flex-col justify-end overflow-hidden rotate-6 bg-[#222222] border border-neutral-700/50"
+                style={{ gridRow: 1, gridColumn: 1 }}
+              ></div>
+
+              <div
+                className="relative h-full w-full rounded-2xl p-6 flex flex-col justify-end overflow-hidden -rotate-2 border border-[#FF6B6B]/30"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(to top, black 30%, transparent), url('/hero-background.webp')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <h4 className="relative z-10 text-white font-bold text-3xl leading-tight drop-shadow-md">
+                  MÁQUINA DE
+                  <br />
+                  GUERRA
+                </h4>
+                <p className="relative z-10 text-neutral-300 text-sm font-light mt-1 mb-2 tracking-wide uppercase">
+                  Sci-Fi / Acción
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-10 items-center justify-center">
+              <button className="bg-gray-700/50 rounded-full p-6 text-center hover:cursor-pointer hover:bg-gray-800 transition-colors border border-neutral-700/50 shadow-lg">
+                <LetterX className="text-[#FF6B6B] h-10 w-10" />
+              </button>
+
+              <button className="bg-[#FF6B6B]/20 rounded-full p-6 text-center hover:cursor-pointer hover:bg-[#FF6B6B]/30 transition-colors border border-[#FF6B6B]/40 shadow-lg shadow-[#FF6B6B]/10">
+                <Heart className="text-[#FF6B6B] h-10 w-10" />
+              </button>
+            </div>
           </div>
         </div>
       </div>

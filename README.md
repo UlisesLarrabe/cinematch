@@ -15,7 +15,7 @@
     <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" /></a>
     <a href="https://supabase.com/"><img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" /></a>
     <a href="https://www.themoviedb.org/"><img src="https://img.shields.io/badge/TMDB_API-01B4E4?style=for-the-badge&logo=themoviedatabase&logoColor=white" alt="TMDB" /></a>
-    <img src="https://img.shields.io/badge/CubePath-0052FF?style=for-the-badge&logo=icloud&logoColor=white" alt="CubePath" />
+    <a href="https://cubepath.com/"><img src="https://img.shields.io/badge/CubePath-0052FF?style=for-the-badge&logo=icloud&logoColor=white" alt="CubePath" /></a>
   </p>
   
   <p>

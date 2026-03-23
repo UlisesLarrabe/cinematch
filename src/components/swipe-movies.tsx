@@ -11,6 +11,7 @@ import ShareButton from "./share-button";
 import NoMoreFilms from "./no-more-films";
 import Heart from "@/svgs/heart";
 import { LetterX } from "@/svgs/letter-x";
+import confetti from "canvas-confetti";
 
 const SwipeMovies = ({ roomId }: { roomId: ParamValue | undefined }) => {
   const supabase = createClient();
@@ -94,6 +95,11 @@ const SwipeMovies = ({ roomId }: { roomId: ParamValue | undefined }) => {
 
             if (otherVotes && otherVotes.length > 0) {
               setMatch(newVote.movie_data);
+              confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 },
+              });
             }
           }
         },

@@ -155,8 +155,8 @@ const SwipeMovies = ({ roomId }: { roomId: ParamValue | undefined }) => {
             <button
               className="bg-gray-500 rounded-full p-4 text-center hover:cursor-pointer hover:bg-gray-800"
               onClick={() => {
-                const movieAlFrente = movies[0];
-                if (movieAlFrente) handleDiscardMovie(movieAlFrente, false);
+                const movieFront = movies[0];
+                if (movieFront) handleDiscardMovie(movieFront, false);
               }}
             >
               <LetterX className="text-red-800 h-10 w-10" />
@@ -165,8 +165,8 @@ const SwipeMovies = ({ roomId }: { roomId: ParamValue | undefined }) => {
             <button
               className="bg-red-neutral rounded-full p-4 text-center hover:cursor-pointer hover:bg-red-500 text-red-800"
               onClick={() => {
-                const movieAlFrente = movies[0];
-                if (movieAlFrente) handleDiscardMovie(movieAlFrente, true);
+                const movieFront = movies[0];
+                if (movieFront) handleDiscardMovie(movieFront, true);
               }}
             >
               <Heart className="text-red-800 h-10 w-10" />

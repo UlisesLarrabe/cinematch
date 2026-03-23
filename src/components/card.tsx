@@ -3,6 +3,7 @@ import { createClient } from "@/utils/supabase/client";
 import { useAnonUser } from "@/utils/user/user";
 import { motion, useMotionValue, useTransform } from "motion/react";
 import { ParamValue } from "next/dist/server/request/params";
+import { useMemo } from "react";
 
 const Card = ({
   movie,
@@ -22,9 +23,12 @@ const Card = ({
   const opacity = useTransform(x, [-200, 0, 200], [0.3, 1, 0.3]);
   const rotateRaw = useTransform(x, [-150, 150], [-18, 18]);
   const isFront = movies[movies.length - 1].id === movie.id;
-
+  const backgroundTilt = useMemo(() => {
+    const pseudoRandom = (movie.id * 17) % 10;
+    return pseudoRandom > 4 ? 4 : -4;
+  }, [movie.id]);
   const rotate = useTransform(() => {
-    const offset = isFront ? 0 : movie.id % 2 ? 4 : -4;
+    const offset = isFront ? 0 : backgroundTilt;
     return `${rotateRaw.get() + offset}deg`;
   });
 

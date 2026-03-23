@@ -23,24 +23,17 @@ const SwipeMovies = ({ roomId }: { roomId: ParamValue | undefined }) => {
   const getMovies = async () => {
     setIsLoading(true);
     try {
-      const providers = await supabase
+      const { data: roomData, error } = await supabase
         .from("rooms")
-        .select("providers")
+        .select("providers, genres, region")
         .eq("id", roomId)
         .single();
-      const genres = await supabase
-        .from("rooms")
-        .select("genres")
-        .eq("id", roomId)
-        .single();
-      const region = await supabase
-        .from("rooms")
-        .select("region")
-        .eq("id", roomId)
-        .single();
-      const genresArray = genres.data?.genres || [];
-      const providersArray = providers.data?.providers || [];
-      const regionValue = region.data?.region || undefined;
+
+      if (error) throw error;
+
+      const genresArray = roomData?.genres || [];
+      const providersArray = roomData?.providers || [];
+      const regionValue = roomData?.region || undefined;
       const res = await fetch("/api/get-movies", {
         method: "POST",
         headers: {
@@ -146,7 +139,7 @@ const SwipeMovies = ({ roomId }: { roomId: ParamValue | undefined }) => {
               style={{ gridRow: 1, gridColumn: 1 }}
             ></div>
           ))}
-        {[...movies].reverse().map((movie) => (
+        {[...movies.slice(0, 3)].reverse().map((movie) => (
           <Card
             key={movie.id}
             movie={movie}

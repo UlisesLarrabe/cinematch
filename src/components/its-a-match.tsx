@@ -9,7 +9,13 @@ export default function ItsAMatch({
   setMatch: React.Dispatch<React.SetStateAction<Movie | null>>;
 }) {
   return (
-    <div className="absolute inset-0 z-50 bg-dark/95 flex flex-col items-center min-h-dvh justify-center p-6 text-center backdrop-blur-md">
+    <div className="absolute inset-0 z-50 bg-dark/95 flex flex-col items-center min-h-vh justify-center p-6 text-center backdrop-blur-xl">
+      <button
+        onClick={() => setMatch(null)}
+        className="mb-8 px-8 py-3 bg-neon-purple  font-bold rounded-full hover:scale-105 transition-transform hover:cursor-pointer text-red-neutral"
+      >
+        SEGUIR BUSCANDO
+      </button>
       <motion.div
         initial={{ scale: 0.5, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -31,13 +37,6 @@ export default function ItsAMatch({
       <p className="text-gray-400 mt-4 max-w-xs text-sm line-clamp-3">
         {match.overview}
       </p>
-
-      <button
-        onClick={() => setMatch(null)}
-        className="mt-8 px-8 py-3 bg-neon-purple  font-bold rounded-full hover:scale-105 transition-transform hover:cursor-pointer text-red-neutral"
-      >
-        SEGUIR BUSCANDO
-      </button>
     </div>
   );
 }

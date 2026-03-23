@@ -9,10 +9,10 @@ export default function ItsAMatch({
   setMatch: React.Dispatch<React.SetStateAction<Movie | null>>;
 }) {
   return (
-    <div className="absolute inset-0 z-50 bg-dark/95 flex flex-col items-center min-h-vh justify-center p-6 text-center backdrop-blur-xl">
+    <div className="absolute inset-0 z-50 bg-dark/95 flex flex-col items-center min-h-dvh justify-center p-6 text-center backdrop-blur-xl">
       <button
         onClick={() => setMatch(null)}
-        className="mb-8 px-8 py-3 bg-neon-purple  font-bold rounded-full hover:scale-105 transition-transform hover:cursor-pointer text-red-neutral"
+        className="mb-8 px-8 py-3 bg-neutral-800 hover:bg-neutral-700 font-bold rounded-full hover:scale-105 transition-transform hover:cursor-pointer text-red-neutral"
       >
         SEGUIR BUSCANDO
       </button>

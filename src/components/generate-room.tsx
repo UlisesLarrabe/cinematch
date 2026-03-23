@@ -42,7 +42,7 @@ const GenerateRoom = ({
   return (
     <>
       <button
-        className="bg-red-neutral text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-600 hover:cursor-pointer w-fit self-end"
+        className="bg-red-neutral text-white font-semibold py-2 px-4 rounded-lg hover:bg-red-600 hover:cursor-pointer w-fit self-end disabled:bg-gray-400 disabled:cursor-not-allowed"
         onClick={handleCreateRoom}
         disabled={isLoading}
       >

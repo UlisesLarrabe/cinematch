@@ -67,6 +67,10 @@ Aprovechando las herramientas integradas de la plataforma, utilicé la opción n
 
 ---
 
+
+
+
+
 ## 🛠️ Stack Tecnológico
 
 El proyecto está construido priorizando la velocidad, el tiempo real y el diseño:
@@ -81,8 +85,10 @@ El proyecto está construido priorizando la velocidad, el tiempo real y el dise�
 
 ## 📸 Demo en Acción
 
-<video src="public/cinematch-demo.mov" autoplay muted loop width="100%" alt="Demo de CineMatch">
-</video>
+
+https://github.com/user-attachments/assets/c63b1fc7-9a17-41d4-ac05-896a3390a86b
+
+
 
 ---
 

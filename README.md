@@ -15,7 +15,6 @@
     <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" /></a>
     <a href="https://supabase.com/"><img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" /></a>
     <a href="https://www.themoviedb.org/"><img src="https://img.shields.io/badge/TMDB_API-01B4E4?style=for-the-badge&logo=themoviedatabase&logoColor=white" alt="TMDB" /></a>
-    <a href="https://cubepath.com/"><img src="https://img.shields.io/badge/CubePath-0052FF?style=for-the-badge&logo=icloud&logoColor=white" alt="CubePath" /></a>
   </p>
   
   <p>
@@ -47,18 +46,6 @@ Elegir una película con tu pareja o amigos suele terminar en un scroll infinito
 
 ---
 
-## ☁️ Infraestructura: Despliegue en CubePath
-
-Para cumplir con los estándares de producción de la hackathon, **CineMatch está alojado íntegramente en un VPS de CubePath**.
-
-Aprovechando las herramientas integradas de la plataforma, utilicé la opción nativa de CubePath para inicializar **Dockploy** con un solo clic. Esta combinación perfecta me permitió:
-
-- Automatizar el despliegue continuo de la aplicación (Next.js) en contenedores sin configuraciones complejas.
-- Mantener la app rápida, estable y completamente aislada.
-- Aprovechar la potencia del servidor en la nube para manejar las conexiones de WebSockets en tiempo real sin latencia.
-
----
-
 ## ✨ Experiencia de Usuario (UX/UI)
 
 - **⚡ Cero Fricción:** No hay formularios de registro, ni logins pesados. Entras, creas y compartes.
@@ -67,10 +54,6 @@ Aprovechando las herramientas integradas de la plataforma, utilicé la opción n
 
 ---
 
-
-
-
-
 ## 🛠️ Stack Tecnológico
 
 El proyecto está construido priorizando la velocidad, el tiempo real y el diseño:
@@ -78,17 +61,13 @@ El proyecto está construido priorizando la velocidad, el tiempo real y el dise�
 - **Frontend:** Next.js (App Router), React, Tailwind CSS.
 - **Base de Datos & Realtime:** Supabase (PostgreSQL, Realtime WebSockets para la sincronización de los Matches).
 - **Consumo de Datos:** The Movie Database (TMDB) API.
-- **Despliegue (DevOps):** VPS de **CubePath** aprovechando su integración nativa con **Dockploy** para la gestión de contenedores.
 - **Optimización:** Uso estratégico de caché (`sessionStorage`) para minimizar peticiones a la API y acelerar la carga de la interfaz.
 
 ---
 
 ## 📸 Demo en Acción
 
-
 https://github.com/user-attachments/assets/c63b1fc7-9a17-41d4-ac05-896a3390a86b
-
-
 
 ---
 

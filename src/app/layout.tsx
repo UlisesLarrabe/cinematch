@@ -16,9 +16,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CineMatch | Encuentra la película perfecta con amigos",
+  metadataBase: new URL("https://cinematch.fun"),
+  title: "CineMatch | El Tinder de las películas para elegir qué ver",
   description:
-    "¿No saben qué ver? Crea una sala, elige tus plataformas de streaming (Netflix, Prime, Disney+), desliza y haz match con tus amigos. Se acabaron las discusiones.",
+    "¿No saben qué ver? Crea una sala compartida, elige tus plataformas (Netflix, Prime, Disney+), desliza y haz match. Se acabaron las peleas por elegir película.",
   keywords: [
     "películas",
     "match",
@@ -26,14 +27,29 @@ export const metadata: Metadata = {
     "qué ver",
     "cine",
     "amigos",
+    "pareja",
     "netflix",
+    "tinder de películas",
+    "elegir película en pareja",
+    "juego colaborativo cine",
+    "app para elegir películas",
+    "qué ver en netflix",
   ],
+  creator: "CineMatch Team",
+  publisher: "CineMatch",
+  applicationName: "CineMatch",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: "/favicon.ico",
   },
-
   openGraph: {
-    title: "CineMatch | Haz match y decide qué ver 🍿",
+    title: "CineMatch | El Tinder de las películas 🍿",
     description:
       "Crea una sala compartida, desliza hacia la derecha y descubre en qué película coinciden todos. ¡Preparen las palomitas!",
     url: "https://cinematch.fun",
@@ -49,10 +65,9 @@ export const metadata: Metadata = {
     locale: "es_AR",
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
-    title: "CineMatch | El Tinder para elegir qué película ver 🍿",
+    title: "CineMatch | El Tinder de las películas 🍿",
     description:
       "Desliza, haz match y decidan qué ver esta noche sin pelear. Filtra por tus plataformas de streaming favoritas.",
     images: ["/cinematch-logo.webp"],
